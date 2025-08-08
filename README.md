@@ -17,6 +17,8 @@ The beginning that predates all of many random posts that track my progress as a
 
 The idea of this came from wanting to make my own CTF that used encryption. So I had made this, but I could never figure out how to make it CTF style, so I turned it into a standard encryption tool :D
 
+The substitution is a little easter egg that reminds me of my partner <3
+
 And while working on UltraCTF, I figured I could use this as a reference point for it so yeah..
 
 So behold the um, minus one? of all my repos (it did come before everything else back in like I think July?) to come about my progress and improvement. If anyone who sees this has any tips, ideas or comments, just lemme know, all feedback is much appreciated.
