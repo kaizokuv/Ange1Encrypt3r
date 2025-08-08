@@ -13,7 +13,7 @@ If you like to encrypt random stuff, or you actually want to keep something safe
     - Uses the hashed password as a key for encryption
 
 ## Why this exists
-The beginning that predates all of many random posts that track my progress as a programmer. Why predates, since this is legit just a repost of an old repo that was stupidly messy.
+The beginning that predates all of many random posts that track my progress as a programmer. Why predates, since this is legit just a repost of an old repo that was stupidly messy (hence why the style is very different...)
 
 The idea of this came from wanting to make my own CTF that used encryption. So I had made this, but I could never figure out how to make it CTF style, so I turned it into a standard encryption tool :D
 
