@@ -6,7 +6,9 @@ If you like to encrypt random stuff, or you actually want to keep something safe
 
 ## Features
 - 3-step encryption
-  - Substitution (You can change the values to have your own substitution)
+  - Substitution
+    - Given the option to use your own pattern
+    - If not given it defaults to the standard [+1, -14, +7, -5, +12]
   - Hexing
   - AES encryption
     - Takes a user given password and hashes it
@@ -27,6 +29,8 @@ So behold the um, minus one? of all my repos (it did come before everything else
 ```bash
 git clone https://github.com/kaizokuv/Ange1Encrypt3r.git
 cd Ange1Encrypt3r
+python -m venv venv && source venv/bin/activate && pip install --upgrade pip
+pip install -r requirements.txt
 python3 main.py
 ```
 
@@ -39,16 +43,29 @@ The alias will cd in a subshell so that once you're done using the tool, you'll 
 
 ### For bash/zsh shell
 ```bash
-alias Ange1Encrypt3r='(cd ~/Ange1Encrypt3r && python main.py)'
+ange1encrypt3r() {
+  pushd ~/Ange1Encrypt3r > /dev/null || return
+  echo "Starting Venv.."
+  python -m venv venv && source venv/bin/activate && pip install --upgrade pip > /dev/null
+  echo "Installing Requirements.."
+  pip install -r requirements.txt > /dev/null
+  python main.py
+  deactivate
+  popd > /dev/null || return
+}
 ```
 Change '~/Ange1Encrypt3r' to the desired file path if you want to set a custom file path
 
 ### For fish shell
 ```bash
-function Ange1Encrypt3r
-    pushd ~/Ange1Encrypt3r > /dev/null
-    python main.py
-    popd > /dev/null
+function ange1encrypt3r
+  pushd ~/Ange1Encrypt3r > /dev/null
+  echo "Starting Venv.."
+  python -m venv venv && source venv/bin/activate.fish && pip install --upgrade pip > /dev/null
+  echo "Installing Requirements.."
+  pip install -r requirements.txt > /dev/null
+  python main.py
+  popd > /dev/null
 end
 ```
 Change '~/Ange1Encrypt3r' to the desired file path if you want to set a custom file path
